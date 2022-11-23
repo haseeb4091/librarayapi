@@ -2,17 +2,22 @@
   "name": "librarayapi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-fileupload": "^1.4.0",
-    "multer": "^1.4.5-lts.1"
+    "firebase": "^9.14.0",
+    "netlify-lambda": "^1.4.3",
+    "serverless-http": "^1.9.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
